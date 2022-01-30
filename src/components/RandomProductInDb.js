@@ -6,18 +6,20 @@ function RandomProductInDb(){
 
 
     const [products, setProducts] = useState([]);
+    const [foto, setFotos] = useState([]);
 	
 	useEffect(() => {
 		fetch(`http://localhost:3001/products/api`)
 		.then(res => res.json())
 		.then (data => 
 			setProducts(data.products)
-			
+		
 		)
 	}, [])
 
-    const asd = products[Math.floor(Math.random()*products.length)] // Porque no funciona
-    console.log(products);
+
+    const randomProduct = products[Math.floor(Math.random()*products.length)] // Porque no funciona
+  
  
     return(
         <div className="col-lg-6 mb-4">
@@ -28,18 +30,17 @@ function RandomProductInDb(){
                 </div>
                 {
                     products.map((product, i) => {
-                        let image = `http://localhost:3001/products/api/${product.id}/image`;
-                        console.log(image);
+                     
                     return (
                 <div className="card-body" key={i}>
                     <div className="text-center">
-                        <Link to={image}>
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src='.png' alt={''}/>
-                        </Link>
+                      
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={`http://localhost:3001/images/products/${product.images[0].name}`} alt={''}/>
+                        
                         <p>{product.name}</p>
                     </div>
                     <p>{product.description}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View product Detail</a>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3001/products/product/${product.id}`} >View product Detail</a>
                 </div>
                 )})
                 }

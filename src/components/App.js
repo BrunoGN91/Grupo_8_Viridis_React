@@ -3,7 +3,7 @@ import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
 import RandomProductInDb from './RandomProductInDb';
-import ContentRowMovies from './ContentRowMovies';
+import ContentRowDatabase from './ContentRowDatabase';
 import SearchProducts from './SearchProducts';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -20,7 +20,7 @@ function App() {
                 <CategoriesInDb />
             </Route>
             <Route path="/ContentRowMovies">
-                <ContentRowMovies />
+                <ContentRowDatabase />
             </Route>
             <Route path="/SearchProducts">
                 <SearchProducts />
@@ -35,7 +35,7 @@ function App() {
                     <RandomProductInDb />
                 </Route>
                 <Route  exact path="/ContentRowMovies">
-                    <ContentRowMovies />
+                    <ContentRowDatabase />
                 </Route>
                
             </Switch>
