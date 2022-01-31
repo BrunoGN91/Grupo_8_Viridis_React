@@ -30,7 +30,17 @@ function ContentRowDatabase(){
 		)
 	}, [])
 
-    console.log(products.length);
+    useEffect(() => {
+		fetch(`http://localhost:3001/users/api`)
+		.then(res => res.json())
+		.then (data => 
+			
+            setUsers(data.data)
+		
+		)
+	}, [])
+    
+
 
 let productsInDB = {
     title: 'Productos',
@@ -51,14 +61,14 @@ let totalCategories = {
 
 /* <!-- Usuarios quantity --> */
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
+let totalUsers = {
+    title:'Usuarios' ,
     color:'warning',
-    quantity:'49',
+    quantity: users.length,
     icon:'fa-user-check'
 }
 
-let cartProps = [productsInDB, totalCategories, actorsQuantity];
+let cartProps = [productsInDB, totalCategories, totalUsers];
 
 
     return (

@@ -27,7 +27,7 @@ function SmallCard(props){
 SmallCard.defaultProps = {
     title: 'No Title',
     color: 'success',
-    cuantity: 'No quantity',
+    quantity: 'No quantity',
     icon: 'fa-clipboard-list'
 }
 
@@ -37,7 +37,7 @@ SmallCard.propTypes = {
     atritutes: PropTypes.shape({
         title: PropTypes.string.isRequired,
         color: PropTypes.string.isRequired,
-        cuantity: PropTypes.oneOfType([
+        quantity: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number
         ]).isRequired,

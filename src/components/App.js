@@ -5,6 +5,7 @@ import CategoriesInDb from './CategoriesInDb';
 import RandomProductInDb from './RandomProductInDb';
 import ContentRowDatabase from './ContentRowDatabase';
 import SearchProducts from './SearchProducts';
+import LastUser from './LastUser';
 import {Link, Route, Switch} from 'react-router-dom';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
             <Route path="/SearchProducts">
                 <SearchProducts />
             </Route>
+            <Route path="/LastUser">
+                <LastUser />
+            </Route>
             <Switch>
                 <Route exact path="/">
                 </Route>
@@ -36,6 +40,9 @@ function App() {
                 </Route>
                 <Route  exact path="/ContentRowMovies">
                     <ContentRowDatabase />
+                </Route>
+                <Route exact path="/LastUser">
+                <LastUser />
                 </Route>
                
             </Switch>
