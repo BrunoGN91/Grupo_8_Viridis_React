@@ -34,7 +34,7 @@ function CategoriesInDb() {
             </div>
              <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="card-body">{category.name}</div>
+                <div className="card-body">{category.products.length}</div>
               </div>
             </div>
         </div>

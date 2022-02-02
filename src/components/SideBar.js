@@ -49,7 +49,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/ContentRowDatabase">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span></Link>
                 </li>
