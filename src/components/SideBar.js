@@ -56,7 +56,7 @@ function SideBar(){
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/SearchProducts">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Search</span>
+                        <span>Products</span>
                 </Link>
                 </li>
 

@@ -40,6 +40,7 @@ function RandomProductInDb(){
                         <p>{product.name}</p>
                     </div>
                     <p>{product.description}</p>
+                    <p>{product.price}</p>
                     <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3001/products/product/${product.id}`} >View product Detail</a>
                 </div>
                 )})

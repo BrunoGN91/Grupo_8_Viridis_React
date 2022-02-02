@@ -29,18 +29,18 @@ function SearchProducts(){
 					<div className="row my-4">
 						<div className="col-12 col-md-6">
 							{/* Buscador */}
-							<form method="GET">
+							{/* <form method="GET">
 								<div className="form-group">
 									<label htmlFor="">Buscar por título:</label>
 									<input type="text" className="form-control" />
 								</div>
 								
-							</form>
+							</form> */}
 						</div>
 					</div>
 					<div className="row">
 						<div className="col-12">
-							<h2>Productos para la palabra: {}</h2>
+							<h2>Productos {}</h2>
 						</div>
 					
 						{
@@ -56,12 +56,13 @@ function SearchProducts(){
 												<div className="text-center">
 													<img 
 														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
-														src={`http://localhost:3001/products/api/${product.id}/image`} // Porque no fuuncionaaa
+														src={`http://localhost:3001/images/products/${product.images[0].name}`} // Porque no fuuncionaaa
 														alt={product.name} 
 														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
-												</div>
+												</div>W
 												<p>{product.description}</p>
+												<p style={{"font-size": "2rem"}}>$ {product.price}</p>
 											</div>
 										</div>
 									</div>
