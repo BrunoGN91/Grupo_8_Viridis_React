@@ -17,9 +17,9 @@ function RandomProductInDb(){
 		)
 	}, [])
 
-
-    const randomProduct = products[Math.floor(Math.random()*products.length)] // Porque no funciona
-  
+    let lastProduct = products.slice(-1)
+    
+   
  
     return(
         <div className="col-lg-6 mb-4">
@@ -29,7 +29,7 @@ function RandomProductInDb(){
                    
                 </div>
                 {
-                    products.map((product, i) => {
+                    lastProduct.map((product, i) => {
                      
                     return (
                 <div className="card-body" key={i}>

@@ -13,6 +13,7 @@ function CategoriesInDb() {
 		)
 	}, [])
 
+  
 
   return (
     <div className="col-lg-6 mb-4">
@@ -25,11 +26,18 @@ function CategoriesInDb() {
        {categories.map((category, i) => {
 
        return (
-            <div className="col-lg-6 mb-4" >
+        <div className="row">
+            <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
                 <div className="card-body">{category.name}</div>
               </div>
             </div>
+             <div className="col-lg-6 mb-4">
+              <div className="card bg-dark text-white shadow">
+                <div className="card-body">{category.name}</div>
+              </div>
+            </div>
+        </div>
             )})}
 
 
