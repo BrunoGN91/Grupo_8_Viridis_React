@@ -15,7 +15,6 @@ function LastUser (){
 	}, [])
 
     let lastUser = users.slice(-1)
-    console.log(lastUser)
 
     return (
         <div className="col-lg-6 mb-4">
